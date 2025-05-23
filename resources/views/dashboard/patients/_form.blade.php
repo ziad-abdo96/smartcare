@@ -17,6 +17,16 @@
 <x-form.input type="date" name="date_of_birth" value="{{ optional($patient->user)->date_of_birth }}"
     placeholder="Enter birthday" />
 
+    
+<label>age</label>
+<x-form.input type="text" name="age" value="{{ optional($patient->user)->date_of_birth }}"
+    placeholder="Enter age" />
+
+    
+<label>ped</label>
+<x-form.input type="text" name="ped" value="{{ optional($patient->user)->ped}}"
+    placeholder="Enter ped" />
+
 <label>Phone Number</label>
 <x-form.input name="phone" value="{{ optional($patient->user)->phone }}" placeholder="Enter phone number" />
 

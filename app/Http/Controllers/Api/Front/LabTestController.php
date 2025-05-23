@@ -34,9 +34,10 @@ class LabTestController extends Controller
         
         $labTest = LabTest::create([
             'patient_id' => $request->patient_id,
-            'test_name'  => $request->name,
-            'test_date'  => $testDate,
-            'test_time'  => $testTime,
+            'name'  => $request->name,
+            'due_date'  => $testDate,
+            'due_time'  => $testTime,
+            'status' => 'pending',
         ]);
 
         $nurses = User::where('type', 'nurse')->get();

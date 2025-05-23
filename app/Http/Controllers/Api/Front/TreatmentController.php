@@ -43,7 +43,10 @@ class TreatmentController extends Controller
 
         Notification::send($nurses, new TreatmentNotification($treatment));
 
-        return redirect()->back()->with('success', 'Treatment created successfully!');
+       return response()->json([
+            'message' => 'Task created successfully!',
+            'treatment'    => $treatment,
+        ], 201);
     }
    
 
